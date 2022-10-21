@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
+  images: {
+    domains: ['static.wikia.nocookie.net'],
+  },
   reactStrictMode: true,
-  swcMinify: true,
 }
-
-module.exports = nextConfig

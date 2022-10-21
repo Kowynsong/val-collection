@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+Resolution	       2560x1440
+player card	       269x644  1.00x3.43
+spray	             269x133  1.00x0.71
+sidearm	           269x188  1.00x1.00
+smg, shotgun	     443x188  1.65x1.00
+rifle	             487x188  1.81x1.00
+sniper, mg, melee  526x188  1.96x1.00
+*/
+
+.aspect {
+  aspect-ratio: 16/9;
+  max-width: 2560px;
+}
+
+.weaponBox {
+  border-radius: 2px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.weaponBox .name {
+  background-color: rgba(119, 119, 119, 0.5);
+  border: 1px solid rgba(119, 119, 119, 0.5);
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+}
