@@ -2,6 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
+import Carousel from "react-gallery-carousel";
+import "react-gallery-carousel/dist/index.css";
+
+import { playercards, sprays, sidearm1, sidearm2, sidearm3, sidearm4, sidearm5, smg1, smg2, shotgun1, shotgun2, rifle1, rifle2, rifle3, rifle4, sniper1, sniper2, mg1, mg2, melee} from "../images";
+
 const Home: NextPage = () => {
   return (
     // valDark: #192033
@@ -21,40 +26,65 @@ const Home: NextPage = () => {
     <div className="bg-black">
       <div className="bg-gradient-to-t from-val-light to-val-dark aspect container mx-auto">
         <div className="flex flex-row">
-
           <div className="w-[17rem] container mx-auto">
             <p className="text-desc-top text-center">PLAYER CARDS</p>
 
             <div className="grid grid-rows-1 grid-flow-col gap-y-6">
-              <div id="classic" className="h-[40rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center"></p>
-                </div>
+            <div id="playercards" className="h-[39rem] relative">
+                  <Carousel
+                    images={playercards}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
             </div>
 
             <p className="text-desc-top text-center">SPRAYS</p>
             <div className="grid grid-rows-3 grid-flow-col gap-y-6">
-              <div id="classic" className="h-[8rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center"></p>
-                </div>
+            <div id="preround" className="h-[8rem] relative">
+                  <Carousel
+                    images={sprays}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
-
-              <div id="classic" className="h-[8rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center"></p>
-                </div>
+              <div id="midround" className="h-[8rem] relative">
+                  <Carousel
+                    images={sprays}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
-
-              <div id="classic" className="h-[8rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center"></p>
-                </div>
+              <div id="postround" className="h-[8rem] relative">
+                  <Carousel
+                    images={sprays}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
             </div>
           </div>
@@ -63,39 +93,73 @@ const Home: NextPage = () => {
             <p className="text-desc-top text-center">SIDEARMS</p>
 
             <div className="grid grid-rows-5 grid-flow-col gap-y-6">
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Classic</p>
-                </div>
+              <div id="classic" className="h-[12rem] relative">
+                  <Carousel
+                    className="object-contain"
+                    images={sidearm1}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
 
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Shorty</p>
-                </div>
+              <div id="shorty" className="h-[12rem] relative">
+                  <Carousel
+                    images={sidearm2}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
 
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Frenzy</p>
-                </div>
+              <div id="frenzy" className="h-[12rem] relative">
+                  <Carousel
+                    images={sidearm3}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
-
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Ghost</p>
-                </div>
+              <div id="ghost" className="h-[12rem] relative">
+                  <Carousel
+                    images={sidearm4}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
-
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Sheriff</p>
-                </div>
+              <div id="sheriff" className="h-[12rem] relative">
+                  <Carousel
+                    images={sidearm5}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
             </div>
           </div>
@@ -104,36 +168,64 @@ const Home: NextPage = () => {
             <p className="text-desc-top text-center">SMGS</p>
 
             <div className="grid grid-rows-2 grid-flow-col gap-y-6">
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Stinger</p>
-                </div>
+              <div id="stinger" className="h-[12rem] relative">
+                  <Carousel
+                    images={smg1}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
 
-              <div id="classic" className="weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Spectre</p>
-                </div>
+              <div id="spectre" className="h-[12rem] relative">
+                  <Carousel
+                    images={smg2}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
             </div>
 
             <p className="text-desc-top text-center">SHOTGUNS</p>
 
             <div className="grid grid-rows-2 grid-flow-col gap-y-6">
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Bucky</p>
-                </div>
+            <div id="bucky" className="h-[12rem] relative">
+                  <Carousel
+                    images={shotgun1}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
 
-              <div id="classic" className="weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Judge</p>
-                </div>
+              <div id="judge" className="h-[12rem] relative">
+                  <Carousel
+                    images={shotgun2}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
             </div>
           </div>
@@ -142,33 +234,59 @@ const Home: NextPage = () => {
             <p className="text-desc-top text-center">RIFLES</p>
 
             <div className="grid grid-rows-4 grid-flow-col gap-y-6">
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Bulldog</p>
-                </div>
+            <div id="bulldog" className="h-[12rem] relative">
+                  <Carousel
+                    images={rifle1}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
+              </div>
+              <div id="guardian" className="h-[12rem] relative">
+                  <Carousel
+                    images={rifle2}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
+              </div>
+              <div id="phantom" className="h-[12rem] relative">
+                  <Carousel
+                    images={rifle3}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
+              </div>
+              <div id="vandal" className="h-[12rem] relative">
+                  <Carousel
+                    images={rifle4}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
 
-              <div id="classic" className="weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Guardian</p>
-                </div>
-              </div>
-
-              <div id="classic" className="weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Phantom</p>
-                </div>
-              </div>
-
-              <div id="classic" className="weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Vandal</p>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -176,66 +294,82 @@ const Home: NextPage = () => {
             <p className="text-desc-top text-center">SNIPER RIFLES</p>
 
             <div className="grid grid-rows-2 grid-flow-col gap-y-6">
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Marshall</p>
-                </div>
+            <div id="marshall" className="h-[12rem] relative">
+                  <Carousel
+                    images={sniper1}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
-
-              <div id="classic" className="weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Operator</p>
-                </div>
+              <div id="operator" className="h-[12rem] relative">
+                  <Carousel
+                    images={sniper2}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
             </div>
 
             <p className="text-desc-top text-center">MACHINE GUNS</p>
-            
-            <div className="grid grid-rows-2 grid-flow-col gap-y-6">
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Ares</p>
-                </div>
-              </div>
 
-              <div id="classic" className="weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Odin</p>
-                </div>
+            <div className="grid grid-rows-2 grid-flow-col gap-y-6">
+            <div id="ares" className="h-[12rem] relative">
+                  <Carousel
+                    images={mg1}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
+              </div>
+              <div id="odin" className="h-[12rem] relative">
+                  <Carousel
+                    images={mg2}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
             </div>
 
             <p className="text-desc-top text-center">MELEE</p>
             <div className="grid grid-rows-1 grid-flow-col gap-y-6">
-              <div id="classic" className="h-[12rem] weaponBox">
-                <div id="gun" className="relative"></div>
-                <div id="name" className="name">
-                  <p className="text-desc-bot text-center">Melee</p>
-                </div>
+            <div id="melee" className="h-[12rem] relative">
+                  <Carousel
+                    images={melee}
+                    hasMediaButton={false}
+                    hasSizeButton={false}
+                    hasIndexBoard={false}
+                    hasThumbnails={false}
+                    hasThumbnailsAtMax={true}
+                    hasCaptions='bottom'
+                    shouldMaximizeOnClick={true}
+                    shouldMinimizeOnClick={true}
+                  />
               </div>
             </div>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
       </div>
     </div>
