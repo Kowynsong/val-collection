@@ -7,7 +7,7 @@ import "react-gallery-carousel/dist/index.css";
 
 import { playercards, sprays, sidearm1, sidearm2, sidearm3, sidearm4, sidearm5, smg1, smg2, shotgun1, shotgun2, rifle1, rifle2, rifle3, rifle4, sniper1, sniper2, mg1, mg2, melee} from "../images";
 
-const Home: NextPage = () => {
+const Home: NextPage = () => { 
   return (
     // valDark: #192033
     // valLight: #6796bf
