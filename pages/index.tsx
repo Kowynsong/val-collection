@@ -402,7 +402,6 @@ const Home: NextPage<{ classics: Skin[] }> = ({ classics }) => {
 type Skin = {
   id: number;
   name: string;
-  imageSrc: string;
   release: number;
   edition: string;
   price: number;
