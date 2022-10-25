@@ -29,8 +29,8 @@ import {
   melee,
 } from "../images";
 
-const Home: NextPage<{ classics: Skin[] }> = ({ classics }) => {
-  const classicSkins = classics.map((_classic: { name: string; }) => ({
+const Home: NextPage<{ images: Skin[] }> = ({ images }) => {
+  const classicSkins = images.map((_classic: { name: string; }) => ({
     src: `/classic/${_classic.name}.png`,
     alt: `${_classic.name}`,
   }));
@@ -415,10 +415,10 @@ export const getStaticProps: GetStaticProps = async () => {
     process.env.SUPABASE_SERVICE_ROLE_KEY || ""
   );
 
-  const { data } = await supabaseAdmin.from("classic").select("*").order("id");
+  const { data } = await supabaseAdmin.from("images").select("*").order("id");
   return {
     props: {
-      classics: data,
+      images: data,
     },
   };
 };
