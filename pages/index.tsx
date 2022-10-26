@@ -149,14 +149,14 @@ const Home: NextPage<{
     src: `/col4/melee/${melee.fileName}`,
     alt: `${melee.name} Melee`,
   }));
-  const playercards = images19.map((playercard: { fileName: string, name: string }) => ({
-    src: `/col1/playercard/${playercard.fileName}`,
-    alt: `${playercard.name}`,
-  }));
-  const sprays = images20.map((spray: { fileName: string, name: string }) => ({
-    src: `/col1/spray/${spray.fileName}`,
-    alt: `${spray.name}`,
-  }));
+  // const playercards = images19.map((playercard: { fileName: string, name: string }) => ({
+  //   src: `/col1/playercard/${playercard.fileName}`,
+  //   alt: `${playercard.name}`,
+  // }));
+  // const sprays = images20.map((spray: { fileName: string, name: string }) => ({
+  //   src: `/col1/spray/${spray.fileName}`,
+  //   alt: `${spray.name}`,
+  // }));
   return (
     // valDark: #192033
     // valLight: #6796bf
@@ -178,62 +178,18 @@ const Home: NextPage<{
             <p className="text-desc-top text-center">PLAYER CARDS</p>
 
             <div className="grid grid-rows-1 grid-flow-col gap-y-6">
-              <div id="playercards" className="h-[39rem] relative">
-                <Carousel
-                  images={playercards}
-                  hasMediaButton={false}
-                  hasSizeButton={false}
-                  hasIndexBoard={false}
-                  hasThumbnails={false}
-                  hasThumbnailsAtMax={true}
-                  hasCaptions="bottom"
-                  shouldMaximizeOnClick={true}
-                  shouldMinimizeOnClick={true}
-                />
+              <div id="playercards" className="h-[39rem] bg-slate-500	relative">
               </div>
             </div>
 
             <p className="text-desc-top text-center">SPRAYS</p>
             <div className="grid grid-rows-3 grid-flow-col gap-y-6">
-              <div id="preround" className="h-[8rem] relative">
-                <Carousel
-                  images={sprays}
-                  hasMediaButton={false}
-                  hasSizeButton={false}
-                  hasIndexBoard={false}
-                  hasThumbnails={false}
-                  hasThumbnailsAtMax={true}
-                  hasCaptions="bottom"
-                  shouldMaximizeOnClick={true}
-                  shouldMinimizeOnClick={true}
-                />
+              <div id="preround" className="h-[8rem] bg-slate-500	 relative">
               </div>
-              <div id="midround" className="h-[8rem] relative">
-                <Carousel
-                  images={sprays}
-                  hasMediaButton={false}
-                  hasSizeButton={false}
-                  hasIndexBoard={false}
-                  hasThumbnails={false}
-                  hasThumbnailsAtMax={true}
-                  hasCaptions="bottom"
-                  shouldMaximizeOnClick={true}
-                  shouldMinimizeOnClick={true}
-                />
+              <div id="midround" className="h-[8rem] bg-slate-500	relative">
               </div>
-              <div id="postround" className="h-[8rem] relative">
-                <Carousel
-                  images={sprays}
-                  hasMediaButton={false}
-                  hasSizeButton={false}
-                  hasIndexBoard={false}
-                  hasThumbnails={false}
-                  hasThumbnailsAtMax={true}
-                  hasCaptions="bottom"
-                  shouldMaximizeOnClick={true}
-                  shouldMinimizeOnClick={true}
-                />
-              </div>
+              <div id="postround" className="h-[8rem] bg-slate-500	relative">
+              </div> 
             </div>
           </div>
 
