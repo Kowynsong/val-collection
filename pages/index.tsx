@@ -1,7 +1,4 @@
 import type { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-
 import Carousel from "react-gallery-carousel";
 import "react-gallery-carousel/dist/index.css";
 
@@ -13,33 +10,102 @@ type Skin = {
   gun: string;
   fileName: string;
 };
-  
 
-export const getStaticProps: GetStaticProps = async () => {  
+export const getStaticProps: GetStaticProps = async () => {
   const supabaseAdmin = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL || "",
     process.env.SUPABASE_SERVICE_ROLE_KEY || ""
   );
-  const { data: playercard } = await supabaseAdmin.from("valData").select("*").eq("gun", "playercard").order("id");
-  const { data: spray } = await supabaseAdmin.from("valData").select("*").eq("gun", "spray").order("id");
-  const { data: classic } = await supabaseAdmin.from("valData").select("*").eq("gun", "Classic").order("id");
-  const { data: shorty } = await supabaseAdmin.from("valData").select("*").eq("gun", "Shorty").order("id");
-  const { data: frenzy } = await supabaseAdmin.from("valData").select("*").eq("gun", "Frenzy").order("id");
-  const { data: ghost } = await supabaseAdmin.from("valData").select("*").eq("gun", "Ghost").order("id");
-  const { data: sheriff } = await supabaseAdmin.from("valData").select("*").eq("gun", "Sheriff").order("id");
-  const { data: stinger } = await supabaseAdmin.from("valData").select("*").eq("gun", "Stinger").order("id");
-  const { data: spectre } = await supabaseAdmin.from("valData").select("*").eq("gun", "Spectre").order("id");
-  const { data: bucky } = await supabaseAdmin.from("valData").select("*").eq("gun", "Bucky").order("id");
-  const { data: judge } = await supabaseAdmin.from("valData").select("*").eq("gun", "Judge").order("id");
-  const { data: bulldog } = await supabaseAdmin.from("valData").select("*").eq("gun", "Bulldog").order("id");
-  const { data: guardian } = await supabaseAdmin.from("valData").select("*").eq("gun", "Guardian").order("id");
-  const { data: phantom } = await supabaseAdmin.from("valData").select("*").eq("gun", "Phantom").order("id");
-  const { data: vandal } = await supabaseAdmin.from("valData").select("*").eq("gun", "Vandal").order("id");
-  const { data: marshall } = await supabaseAdmin.from("valData").select("*").eq("gun", "Marshall").order("id");
-  const { data: operator } = await supabaseAdmin.from("valData").select("*").eq("gun", "Operator").order("id");
-  const { data: ares } = await supabaseAdmin.from("valData").select("*").eq("gun", "Ares").order("id");
-  const { data: odin } = await supabaseAdmin.from("valData").select("*").eq("gun", "Odin").order("id");
-  const { data: melee } = await supabaseAdmin.from("valData").select("*").eq("gun", "Melee").order("id");
+  const { data: classic } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Classic")
+    .order("id");
+  const { data: shorty } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Shorty")
+    .order("id");
+  const { data: frenzy } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Frenzy")
+    .order("id");
+  const { data: ghost } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Ghost")
+    .order("id");
+  const { data: sheriff } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Sheriff")
+    .order("id");
+  const { data: stinger } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Stinger")
+    .order("id");
+  const { data: spectre } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Spectre")
+    .order("id");
+  const { data: bucky } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Bucky")
+    .order("id");
+  const { data: judge } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Judge")
+    .order("id");
+  const { data: bulldog } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Bulldog")
+    .order("id");
+  const { data: guardian } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Guardian")
+    .order("id");
+  const { data: phantom } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Phantom")
+    .order("id");
+  const { data: vandal } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Vandal")
+    .order("id");
+  const { data: marshall } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Marshall")
+    .order("id");
+  const { data: operator } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Operator")
+    .order("id");
+  const { data: ares } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Ares")
+    .order("id");
+  const { data: odin } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Odin")
+    .order("id");
+  const { data: melee } = await supabaseAdmin
+    .from("valData")
+    .select("*")
+    .eq("gun", "Melee")
+    .order("id");
 
   return {
     props: {
@@ -61,91 +127,142 @@ export const getStaticProps: GetStaticProps = async () => {
       images16: ares,
       images17: odin,
       images18: melee,
-      images19: playercard,
-      images20: spray,
     },
   };
 };
 
-const Home: NextPage<{ 
-  images01: Skin[], images02: Skin[], images03: Skin[], images04: Skin[], images05: Skin[], 
-  images06: Skin[], images07: Skin[], images08: Skin[], images09: Skin[], images10: Skin[], 
-  images11: Skin[], images12: Skin[], images13: Skin[], images14: Skin[], images15: Skin[],
-  images16: Skin[], images17: Skin[], images18: Skin[], images19: Skin[], images20: Skin[]
-}> = ({ 
-  images01, images02, images03, images04, images05, 
-  images06, images07, images08, images09, images10, 
-  images11, images12, images13, images14, images15, 
-  images16, images17, images18, images19, images20 }) => {
-  const classics = images01.map((classic: { fileName: string, name: string }) => ({
-    src: `/col1/classic/${classic.fileName}`,
-    alt: `${classic.name} Classic`,
-  }));
-  const shortys = images02.map((shorty: { fileName: string, name: string }) => ({
-    src: `/col1/shorty/${shorty.fileName}`,
-    alt: `${shorty.name} Shorty`,
-  }));
-  const frenzys = images03.map((frenzy: { fileName: string, name: string }) => ({
-    src: `/col1/frenzy/${frenzy.fileName}`,
-    alt: `${frenzy.name} Frenzy`,
-  })); 
-  const ghosts = images04.map((ghost: { fileName: string, name: string }) => ({
+const Home: NextPage<{
+  images01: Skin[];
+  images02: Skin[];
+  images03: Skin[];
+  images04: Skin[];
+  images05: Skin[];
+  images06: Skin[];
+  images07: Skin[];
+  images08: Skin[];
+  images09: Skin[];
+  images10: Skin[];
+  images11: Skin[];
+  images12: Skin[];
+  images13: Skin[];
+  images14: Skin[];
+  images15: Skin[];
+  images16: Skin[];
+  images17: Skin[];
+  images18: Skin[];
+}> = ({
+  images01,
+  images02,
+  images03,
+  images04,
+  images05,
+  images06,
+  images07,
+  images08,
+  images09,
+  images10,
+  images11,
+  images12,
+  images13,
+  images14,
+  images15,
+  images16,
+  images17,
+  images18,
+}) => {
+  const classics = images01.map(
+    (classic: { fileName: string; name: string }) => ({
+      src: `/col1/classic/${classic.fileName}`,
+      alt: `${classic.name} Classic`,
+    })
+  );
+  const shortys = images02.map(
+    (shorty: { fileName: string; name: string }) => ({
+      src: `/col1/shorty/${shorty.fileName}`,
+      alt: `${shorty.name} Shorty`,
+    })
+  );
+  const frenzys = images03.map(
+    (frenzy: { fileName: string; name: string }) => ({
+      src: `/col1/frenzy/${frenzy.fileName}`,
+      alt: `${frenzy.name} Frenzy`,
+    })
+  );
+  const ghosts = images04.map((ghost: { fileName: string; name: string }) => ({
     src: `/col1/ghost/${ghost.fileName}`,
     alt: `${ghost.name} Ghost`,
   }));
-  const sheriffs = images05.map((sheriff: { fileName: string, name: string }) => ({
-    src: `/col1/sheriff/${sheriff.fileName}`,
-    alt: `${sheriff.name} Sheriff`,
-  }));
-  const stingers = images06.map((stinger: { fileName: string, name: string }) => ({
-    src: `/col2/stinger/${stinger.fileName}`,
-    alt: `${stinger.name} Stinger`,
-  }));
-  const spectres = images07.map((spectre: { fileName: string, name: string }) => ({
-    src: `/col2/spectre/${spectre.fileName}`,
-    alt: `${spectre.name} Spectre`,
-  }));
-  const buckys = images08.map((bucky: { fileName: string, name: string }) => ({
+  const sheriffs = images05.map(
+    (sheriff: { fileName: string; name: string }) => ({
+      src: `/col1/sheriff/${sheriff.fileName}`,
+      alt: `${sheriff.name} Sheriff`,
+    })
+  );
+  const stingers = images06.map(
+    (stinger: { fileName: string; name: string }) => ({
+      src: `/col2/stinger/${stinger.fileName}`,
+      alt: `${stinger.name} Stinger`,
+    })
+  );
+  const spectres = images07.map(
+    (spectre: { fileName: string; name: string }) => ({
+      src: `/col2/spectre/${spectre.fileName}`,
+      alt: `${spectre.name} Spectre`,
+    })
+  );
+  const buckys = images08.map((bucky: { fileName: string; name: string }) => ({
     src: `/col2/bucky/${bucky.fileName}`,
     alt: `${bucky.name} Bucky`,
   }));
-  const judges = images09.map((judge: { fileName: string, name: string }) => ({
+  const judges = images09.map((judge: { fileName: string; name: string }) => ({
     src: `/col2/judge/${judge.fileName}`,
     alt: `${judge.name} Judge`,
   }));
-  const bulldogs = images10.map((bulldog: { fileName: string, name: string }) => ({
-    src: `/col3/bulldog/${bulldog.fileName}`,
-    alt: `${bulldog.name} Bulldog`,
-  }));
-  const guardians = images11.map((guardian: { fileName: string, name: string }) => ({
-    src: `/col3/guardian/${guardian.fileName}`,
-    alt: `${guardian.name} Guardian`,
-  }));
-  const phantoms = images12.map((phantom: { fileName: string, name: string }) => ({
-    src: `/col3/phantom/${phantom.fileName}`,
-    alt: `${phantom.name} Phantom`,
-  }));
-  const vandals = images13.map((vandal: { fileName: string, name: string }) => ({
-    src: `/col3/vandal/${vandal.fileName}`,
-    alt: `${vandal.name} Vandal`,
-  }));
-  const marshalls = images14.map((marshall: { fileName: string, name: string }) => ({
-    src: `/col4/marshall/${marshall.fileName}`,
-    alt: `${marshall.name} Marshall`,
-  }));
-  const operators = images15.map((operator: { fileName: string, name: string }) => ({
-    src: `/col4/operator/${operator.fileName}`,
-    alt: `${operator.name} Operator`,
-  }));
-  const aress = images16.map((ares: { fileName: string, name: string }) => ({
+  const bulldogs = images10.map(
+    (bulldog: { fileName: string; name: string }) => ({
+      src: `/col3/bulldog/${bulldog.fileName}`,
+      alt: `${bulldog.name} Bulldog`,
+    })
+  );
+  const guardians = images11.map(
+    (guardian: { fileName: string; name: string }) => ({
+      src: `/col3/guardian/${guardian.fileName}`,
+      alt: `${guardian.name} Guardian`,
+    })
+  );
+  const phantoms = images12.map(
+    (phantom: { fileName: string; name: string }) => ({
+      src: `/col3/phantom/${phantom.fileName}`,
+      alt: `${phantom.name} Phantom`,
+    })
+  );
+  const vandals = images13.map(
+    (vandal: { fileName: string; name: string }) => ({
+      src: `/col3/vandal/${vandal.fileName}`,
+      alt: `${vandal.name} Vandal`,
+    })
+  );
+  const marshalls = images14.map(
+    (marshall: { fileName: string; name: string }) => ({
+      src: `/col4/marshall/${marshall.fileName}`,
+      alt: `${marshall.name} Marshall`,
+    })
+  );
+  const operators = images15.map(
+    (operator: { fileName: string; name: string }) => ({
+      src: `/col4/operator/${operator.fileName}`,
+      alt: `${operator.name} Operator`,
+    })
+  );
+  const aress = images16.map((ares: { fileName: string; name: string }) => ({
     src: `/col4/ares/${ares.fileName}`,
     alt: `${ares.name} Ares`,
   }));
-  const odins = images17.map((odin: { fileName: string, name: string }) => ({
+  const odins = images17.map((odin: { fileName: string; name: string }) => ({
     src: `/col4/odin/${odin.fileName}`,
     alt: `${odin.name} Odin`,
   }));
-  const melees = images18.map((melee: { fileName: string, name: string }) => ({
+  const melees = images18.map((melee: { fileName: string; name: string }) => ({
     src: `/col4/melee/${melee.fileName}`,
     alt: `${melee.name} Melee`,
   }));
@@ -178,18 +295,26 @@ const Home: NextPage<{
             <p className="text-desc-top text-center">PLAYER CARDS</p>
 
             <div className="grid grid-rows-1 grid-flow-col gap-y-6">
-              <div id="playercards" className="h-[39rem] bg-slate-500	relative">
-              </div>
+              <div
+                id="playercards"
+                className="h-[39rem] bg-slate-500	relative"
+              ></div>
             </div>
 
             <p className="text-desc-top text-center">SPRAYS</p>
             <div className="grid grid-rows-3 grid-flow-col gap-y-6">
-              <div id="preround" className="h-[8rem] bg-slate-500	 relative">
-              </div>
-              <div id="midround" className="h-[8rem] bg-slate-500	relative">
-              </div>
-              <div id="postround" className="h-[8rem] bg-slate-500	relative">
-              </div> 
+              <div
+                id="preround"
+                className="h-[8rem] bg-slate-500	 relative"
+              ></div>
+              <div
+                id="midround"
+                className="h-[8rem] bg-slate-500	relative"
+              ></div>
+              <div
+                id="postround"
+                className="h-[8rem] bg-slate-500	relative"
+              ></div>
             </div>
           </div>
 
