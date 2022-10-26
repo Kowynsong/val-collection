@@ -1,3 +1,9 @@
+# Due to the size of this project, it is not able to be hosted for free on Vercel. To view the project please do the following steps.
+1. git clone the repository onto a device.
+2. npm install to download necessary node_modules.
+3. npm run dev to view project.
+Thank you!
+
 # Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
