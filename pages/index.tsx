@@ -88,7 +88,7 @@ const Home: NextPage<{
   const frenzys = images03.map((frenzy: { fileName: string, name: string }) => ({
     src: `/col1/frenzy/${frenzy.fileName}`,
     alt: `${frenzy.name} Frenzy`,
-  }));
+  })); 
   const ghosts = images04.map((ghost: { fileName: string, name: string }) => ({
     src: `/col1/ghost/${ghost.fileName}`,
     alt: `${ghost.name} Ghost`,
